@@ -2,7 +2,7 @@ pub mod vec {
     use {
         serde::{de, Deserializer, Serializer},
         serde::{Deserialize, Serialize},
-        solana_sdk::pubkey::Pubkey,
+        solana_pubkey::Pubkey,
         std::str::FromStr,
     };
 
@@ -32,7 +32,7 @@ pub mod vec {
 pub mod option {
     use {
         serde::{Serialize, Serializer},
-        solana_sdk::pubkey::Pubkey,
+        solana_pubkey::Pubkey,
     };
 
     pub fn serialize<S>(t: &Option<Pubkey>, serializer: S) -> Result<S::Ok, S::Error>

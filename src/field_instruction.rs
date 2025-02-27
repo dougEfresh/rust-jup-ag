@@ -2,7 +2,8 @@
 pub mod instruction {
     use base64::prelude::{Engine as _, BASE64_STANDARD};
     use serde::{Deserialize, Deserializer};
-    use solana_sdk::{instruction::AccountMeta, instruction::Instruction, pubkey::Pubkey};
+    use solana_pubkey::Pubkey;
+    use solana_sdk::{instruction::AccountMeta, instruction::Instruction};
     use std::str::FromStr;
 
     pub fn deserialize<'de, D>(deserializer: D) -> Result<Instruction, D::Error>
